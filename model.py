@@ -24,39 +24,39 @@ class Net(nn.Module):
             nn.ReLU(),
             nn.BatchNorm2d(self.num_channels * 2),
             nn.Dropout(0.05),
-            nn.Conv2d(in_channels=self.num_channels * 2, out_channels=self.num_channels * 2, kernel_size=(3,3), padding=1, bias=False), #rin = 9  rout = 13
+            nn.Conv2d(in_channels=self.num_channels * 2, out_channels=self.num_channels * 2, kernel_size=(3,3), padding=1, bias=False), #rin = 9  rout = 11
             nn.ReLU(),
             nn.BatchNorm2d(self.num_channels * 2),
             nn.Dropout(0.05),
-            nn.Conv2d(in_channels=self.num_channels * 2, out_channels=self.num_channels * 2, kernel_size=(3,3), stride=2, bias=False, padding=1), #rin = 13  rout = 15
+            nn.Conv2d(in_channels=self.num_channels * 2, out_channels=self.num_channels * 2, kernel_size=(3,3), stride=2, bias=False, padding=1), #rin = 11  rout = 13
             nn.ReLU(),
             nn.BatchNorm2d(self.num_channels * 2),
             nn.Dropout(0.05),
         )
         self.convblock3 = nn.Sequential(
-            nn.Conv2d(in_channels=self.num_channels * 2, out_channels=self.num_channels * 4, kernel_size=(3,3), padding=1, bias=False),  #rin = 15  rout = 19
+            nn.Conv2d(in_channels=self.num_channels * 2, out_channels=self.num_channels * 4, kernel_size=(3,3), padding=1, bias=False),  #rin = 13  rout = 17
             nn.ReLU(),
             nn.BatchNorm2d(self.num_channels * 4),
             nn.Dropout(0.05),
-            nn.Conv2d(in_channels=self.num_channels * 4, out_channels=self.num_channels * 4, kernel_size=(3,3),padding=1, bias=False), #rin = 19  rout = 23
+            nn.Conv2d(in_channels=self.num_channels * 4, out_channels=self.num_channels * 4, kernel_size=(3,3),padding=1, bias=False), #rin = 17  rout = 21
             nn.ReLU(),
             nn.BatchNorm2d(self.num_channels * 4),
             nn.Dropout(0.05),
-            nn.Conv2d(in_channels=self.num_channels * 4, out_channels=self.num_channels * 4, kernel_size=(3,3), stride=2, bias=False, padding=1), #rin = 23  rout = 27
+            nn.Conv2d(in_channels=self.num_channels * 4, out_channels=self.num_channels * 4, kernel_size=(3,3), stride=2, bias=False, padding=1), #rin = 21  rout = 25
             nn.ReLU(),
             nn.BatchNorm2d(self.num_channels * 4),
             nn.Dropout(0.05),
         )
         self.convblock4 = nn.Sequential(
-            nn.Conv2d(in_channels=self.num_channels * 4, out_channels=self.num_channels * 8, kernel_size=(3,3), padding=1, bias=False),  #rin = 27  rout = 35
+            nn.Conv2d(in_channels=self.num_channels * 4, out_channels=self.num_channels * 8, kernel_size=(3,3), padding=1, bias=False),  #rin = 25  rout = 33
             nn.ReLU(),
             nn.BatchNorm2d(self.num_channels * 8),
             nn.Dropout(0.05),
-            nn.Conv2d(in_channels=self.num_channels * 8, out_channels=self.num_channels * 8, kernel_size=(3,3), padding=1, bias=False), #rin = 35  rout = 39
+            nn.Conv2d(in_channels=self.num_channels * 8, out_channels=self.num_channels * 8, kernel_size=(3,3), padding=1, bias=False), #rin = 33  rout = 41
             nn.ReLU(),
             nn.BatchNorm2d(self.num_channels * 8),
             nn.Dropout(0.05),
-            nn.Conv2d(in_channels=self.num_channels * 8, out_channels=self.num_channels * 8, kernel_size=(3,3), dilation=2, bias=False), #rin = 39  rout = 55
+            nn.Conv2d(in_channels=self.num_channels * 8, out_channels=self.num_channels * 8, kernel_size=(3,3), dilation=2, bias=False), #rin = 41  rout = 57
             nn.ReLU(),
             nn.BatchNorm2d(self.num_channels * 8),
             nn.Dropout(0.02),
