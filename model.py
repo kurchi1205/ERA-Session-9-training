@@ -63,7 +63,7 @@ class Net(nn.Module):
         )
 
         self.gap = nn.Sequential(
-            nn.AvgPool2d(kernel_size=3) # 7>> 9... nn.AdaptiveAvgPool((1, 1))
+            nn.AvgPool2d(kernel_size=3)
         )
 
         self.out = nn.Sequential(
